@@ -67,8 +67,10 @@ def segmentation(img):
     fullTempPath ="ocr_result.txt"
     text = pytesseract.image_to_string(thre_mor, config='tessdata-dir /content/drive/MyDrive/Plate_detect_and_recognize/tessdata --psm 6 -oem 1 --dpi 600 -c tessedit_char_whitelist=กขฆงจฉชฌญฎฐธพภวศษสฒณตถบปผยรลนฬอฮทมฟ0123456789')
     
-    
+    #uncomment these line to ocr in batch
+    '''
     file1 = open(fullTempPath, "a+")
     file1.write("\n")
     file1.write(text+"\n")
     file1.close() 
+    '''
